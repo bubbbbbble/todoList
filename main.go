@@ -9,5 +9,5 @@ func main(){
 	settings.Init()
 	mysql.Init()
 	redis.Init()
-	return
+
 } 

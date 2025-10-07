@@ -19,8 +19,8 @@ func Init() {
 	var err error
 	DB,err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		panic(err)
-		print("mysql connect failed")
+		fmt.Println("mysql connect failed")
+
 	}
 
 	//db.AutoMigrate(&model.Todo{})
