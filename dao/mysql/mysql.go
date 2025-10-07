@@ -4,6 +4,7 @@ import (
   	"gorm.io/gorm"
   	"github.com/spf13/viper"
   	"fmt"
+	"todolist/models"
 
 )
 
@@ -20,9 +21,9 @@ func Init() {
 	DB,err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println("mysql connect failed")
-
 	}
 
-	//db.AutoMigrate(&model.Todo{})
+	DB.AutoMigrate(&models.Todo{})
+	DB.AutoMigrate(&models.User{})
 
 }	

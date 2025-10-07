@@ -15,7 +15,7 @@ func Init() {
 		DB:       viper.GetInt("redis.db"),
 	})
 	rdb.Set("name", "wxw", 0)
-	val := rdb.Get( "name").Val()
+	val := rdb.Get("name").Val()
 	fmt.Println("redis connect success", val)
 
 }
